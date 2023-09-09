@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:json_placeholder/model/post_model.dart';
 import 'package:json_placeholder/repositories/posrt_repository.dart';
 
-import 'widgets/card_comentario.dart';
+import 'widgets/card_post.dart';
 
 class PostPage extends StatefulWidget {
   const PostPage({super.key});
@@ -52,7 +52,7 @@ class _PostPageState extends State<PostPage> {
         ),
         backgroundColor: const Color(0xffe12885),
       ),
-      body: carregando ? loading() : CardComentatio(postDoSite: postDoSite),
+      body: carregando ? loading() : CardPost(postDoSite: postDoSite),
     );
   }
 }

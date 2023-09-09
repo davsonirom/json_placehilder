@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:json_placeholder/pages/comentarios/comentario_page.dart';
 
 import '../../../model/post_model.dart';
 
-class CardComentatio extends StatelessWidget {
-  const CardComentatio({
+class CardPost extends StatelessWidget {
+  const CardPost({
     super.key,
     required this.postDoSite,
   });
@@ -69,7 +70,16 @@ class CardComentatio extends StatelessWidget {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: TextButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => ComentarioPage(
+                                        postId: post.id,
+                                        titilo: post.title,
+                                        post: post.body,
+                                      )));
+                        },
                         icon: const Icon(
                           Icons.comment,
                           color: Color(0xffe12885),
