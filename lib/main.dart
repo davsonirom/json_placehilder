@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:json_placeholder/pages/posts/post_page.dart';
 
 void main() {
   runApp(const MiaSoftware39());
@@ -12,10 +13,10 @@ class MiaSoftware39 extends StatelessWidget {
     return MaterialApp(
       title: '{JSON}Placeholder',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffe12885)),
         useMaterial3: true,
       ),
-      home: const SizedBox.shrink(),
+      home: const PostPage(),
     );
   }
 }
