@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-class Tarefa {
+class TarefaModel {
   int userId;
   int id;
   String title;
   bool completed;
-  Tarefa({
+  TarefaModel({
     required this.userId,
     required this.id,
     required this.title,
@@ -21,8 +21,8 @@ class Tarefa {
     };
   }
 
-  factory Tarefa.fromMap(Map<String, dynamic> map) {
-    return Tarefa(
+  factory TarefaModel.fromMap(Map<String, dynamic> map) {
+    return TarefaModel(
       userId: map['userId'] as int,
       id: map['id'] as int,
       title: map['title'] as String,
@@ -32,6 +32,6 @@ class Tarefa {
 
   String toJson() => json.encode(toMap());
 
-  factory Tarefa.fromJson(String source) =>
-      Tarefa.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory TarefaModel.fromJson(String source) =>
+      TarefaModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

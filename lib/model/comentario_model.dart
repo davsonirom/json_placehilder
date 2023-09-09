@@ -1,12 +1,12 @@
 import 'dart:convert';
 
-class Comentario {
+class ComentarioModel {
   int postId;
   int id;
   String name;
   String email;
   String body;
-  Comentario({
+  ComentarioModel({
     required this.postId,
     required this.id,
     required this.name,
@@ -24,8 +24,8 @@ class Comentario {
     };
   }
 
-  factory Comentario.fromMap(Map<String, dynamic> map) {
-    return Comentario(
+  factory ComentarioModel.fromMap(Map<String, dynamic> map) {
+    return ComentarioModel(
       postId: map['postId'] as int,
       id: map['id'] as int,
       name: map['name'] as String,
@@ -36,6 +36,6 @@ class Comentario {
 
   String toJson() => json.encode(toMap());
 
-  factory Comentario.fromJson(String source) =>
-      Comentario.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory ComentarioModel.fromJson(String source) =>
+      ComentarioModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

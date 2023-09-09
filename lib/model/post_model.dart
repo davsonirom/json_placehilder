@@ -1,11 +1,12 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
-class Post {
+class PostModel {
   int userId;
   int id;
   String title;
   String body;
-  Post({
+  PostModel({
     required this.userId,
     required this.id,
     required this.title,
@@ -21,8 +22,8 @@ class Post {
     };
   }
 
-  factory Post.fromMap(Map<String, dynamic> map) {
-    return Post(
+  factory PostModel.fromMap(Map<String, dynamic> map) {
+    return PostModel(
       userId: map['userId'] as int,
       id: map['id'] as int,
       title: map['title'] as String,
@@ -32,6 +33,6 @@ class Post {
 
   String toJson() => json.encode(toMap());
 
-  factory Post.fromJson(String source) =>
-      Post.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory PostModel.fromJson(String source) =>
+      PostModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-class Album {
+class AlbumModel {
   int userId;
   int id;
   String title;
-  Album({
+  AlbumModel({
     required this.userId,
     required this.id,
     required this.title,
@@ -18,8 +18,8 @@ class Album {
     };
   }
 
-  factory Album.fromMap(Map<String, dynamic> map) {
-    return Album(
+  factory AlbumModel.fromMap(Map<String, dynamic> map) {
+    return AlbumModel(
       userId: map['userId'] as int,
       id: map['id'] as int,
       title: map['title'] as String,
@@ -28,6 +28,6 @@ class Album {
 
   String toJson() => json.encode(toMap());
 
-  factory Album.fromJson(String source) =>
-      Album.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory AlbumModel.fromJson(String source) =>
+      AlbumModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

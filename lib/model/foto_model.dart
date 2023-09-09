@@ -1,12 +1,12 @@
 import 'dart:convert';
 
-class Foto {
+class FotoModel {
   int albumId;
   int id;
   String title;
   String url;
   String thumbnailUrl;
-  Foto({
+  FotoModel({
     required this.albumId,
     required this.id,
     required this.title,
@@ -24,8 +24,8 @@ class Foto {
     };
   }
 
-  factory Foto.fromMap(Map<String, dynamic> map) {
-    return Foto(
+  factory FotoModel.fromMap(Map<String, dynamic> map) {
+    return FotoModel(
       albumId: map['albumId'] as int,
       id: map['id'] as int,
       title: map['title'] as String,
@@ -36,6 +36,6 @@ class Foto {
 
   String toJson() => json.encode(toMap());
 
-  factory Foto.fromJson(String source) =>
-      Foto.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory FotoModel.fromJson(String source) =>
+      FotoModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }
