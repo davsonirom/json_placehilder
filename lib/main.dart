@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:json_placeholder/pages/albuns/album_page.dart';
+import 'package:json_placeholder/pages/fotos/foto_page.dart';
 import 'package:json_placeholder/pages/posts/post_page.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MiaSoftware39 extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffe12885)),
         useMaterial3: true,
       ),
-      home: const AlbumPage(),
+      home: const FotoPage(),
     );
   }
 }
